@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>private</title>
+</head>
+<body>
+    
+    <h2>Looping</h2>
+    <button type="button" onclick="add()">add pattern</button>
+
+    <p id="demo"></p>
+
+</body>
+<script>
+
+    var height = 5;
+    function Pyramid() {
+   
+    var output = '';
+    for (var i = 1; i <= height; i++) {
+
+        for (var j = 1; j <= i; j++) {
+            
+            if (j % 2 ==0) {
+                output += "*"
+            } else {
+                output += "#"
+            }
+            output += '\n'
+        }
+        console.log(output);
+        output += '<br>';
+    }
+    document.getElementById("demo").innerHTML = output;
+}
+
+    function add() {
+        height++
+        Pyramid()
+    }
+
+
+Pyramid(5);
+
+
+
+</script>
+</html>
